@@ -12,19 +12,19 @@ function startGame() {
     // console.log(randomNumber);
     
     totalChances = 10;
-    inputEl.value = ""; // Clear input
-    inputEl.disabled = false; // Enable input
-    guessEl.textContent = ""; // Clear previous messages
+    inputEl.value = ""; 
+    inputEl.disabled = false; 
+    guessEl.textContent = ""; 
     remainingChancesTextEl.textContent = `Remaining Chances: ${totalChances}`;
     remainingChancesEl.textContent = totalChances;
-    checkBtnEl.textContent = "Check Guess"; // Reset button text
+    checkBtnEl.textContent = "Check Guess"; 
 }
 
-startGame(); // Start the game when the page loads
+startGame(); 
 
 checkBtnEl.addEventListener("click", () => {
     if (checkBtnEl.textContent === "Play Again...😉") {
-        startGame(); // Restart the game
+        startGame(); 
         return;
     }
 
@@ -32,7 +32,7 @@ checkBtnEl.addEventListener("click", () => {
     let inputValue = Number(inputEl.value); // Convert input to a number
 
     if (totalChances === 0) {
-        inputEl.value = ""; // Clear input value
+        inputEl.value = ""; 
         inputEl.disabled = true;
         guessEl.textContent = "Oops...! Bad luck😥, You lost the game.";
         guessEl.style.color = "red";
