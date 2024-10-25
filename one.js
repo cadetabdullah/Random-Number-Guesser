@@ -9,7 +9,7 @@ let totalChances;
 
 function startGame() {
     randomNumber = Math.floor(Math.random() * 100);
-    console.log(randomNumber);
+    // console.log(randomNumber);
     
     totalChances = 10;
     inputEl.value = ""; // Clear input
